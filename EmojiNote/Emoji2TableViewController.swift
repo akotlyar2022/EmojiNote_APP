@@ -36,17 +36,19 @@ class EmojiTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
+    // create sections in Table
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    
+    //create rows in sections = objects.count
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return objects.count
     }
 
-    
+    // fill cell from array
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "emojiCell", for: indexPath) as! EmojiTableViewCell
         
@@ -57,17 +59,32 @@ class EmojiTableViewController: UITableViewController {
         return cell
     }
     
+    //edit row - press "edit"
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
             return .delete
         }
     
-    
+    // edit row  - delete row - press "delete"
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             objects.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             
         }
+    }
+    // can move cell up&down - touch right element and move up&down
+    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    // move cell up&down - touch right element and move up&down
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        // choose row
+        let movedEmoji = objects.remove(at: sourceIndexPath.row)
+        // move row
+        objects.insert(movedEmoji, at: destinationIndexPath.row)
+        //reload table
+        tableView.reloadData()
     }
     
     
