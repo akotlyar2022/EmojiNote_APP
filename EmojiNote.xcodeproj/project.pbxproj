@@ -16,6 +16,7 @@
 		FA9947862932530800279807 /* Emoji2TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9947852932530800279807 /* Emoji2TableViewController.swift */; };
 		FA9947882932602200279807 /* EmojiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9947872932602200279807 /* EmojiTableViewCell.swift */; };
 		FA99478A2932AB0500279807 /* EmojiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9947892932AB0500279807 /* EmojiModel.swift */; };
+		FA99478E2937630400279807 /* NewEmojiTableViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99478D2937630400279807 /* NewEmojiTableViewController2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		FA9947852932530800279807 /* Emoji2TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji2TableViewController.swift; sourceTree = "<group>"; };
 		FA9947872932602200279807 /* EmojiTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiTableViewCell.swift; sourceTree = "<group>"; };
 		FA9947892932AB0500279807 /* EmojiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiModel.swift; sourceTree = "<group>"; };
+		FA99478D2937630400279807 /* NewEmojiTableViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEmojiTableViewController2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				FA9947892932AB0500279807 /* EmojiModel.swift */,
 				FA9947872932602200279807 /* EmojiTableViewCell.swift */,
 				FA9947852932530800279807 /* Emoji2TableViewController.swift */,
+				FA99478D2937630400279807 /* NewEmojiTableViewController2.swift */,
 				FA9947752932417400279807 /* Main.storyboard */,
 				FA9947782932417800279807 /* Assets.xcassets */,
 				FA99477A2932417800279807 /* LaunchScreen.storyboard */,
@@ -152,6 +155,7 @@
 				FA99478A2932AB0500279807 /* EmojiModel.swift in Sources */,
 				FA9947882932602200279807 /* EmojiTableViewCell.swift in Sources */,
 				FA9947702932417400279807 /* AppDelegate.swift in Sources */,
+				FA99478E2937630400279807 /* NewEmojiTableViewController2.swift in Sources */,
 				FA9947722932417400279807 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
