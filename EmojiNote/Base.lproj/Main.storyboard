@@ -143,7 +143,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
-                                                        <action selector="textChanged:" destination="0ja-Yg-95J" eventType="editingChanged" id="swS-Gh-rkC"/>
+                                                        <action selector="textChanged:" destination="0ja-Yg-95J" eventType="editingChanged" id="vKT-YS-AxP"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -171,7 +171,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
-                                                        <action selector="textChanged:" destination="0ja-Yg-95J" eventType="editingChanged" id="dDg-hW-m9e"/>
+                                                        <action selector="textChanged:" destination="0ja-Yg-95J" eventType="editingChanged" id="e7c-vc-F1n"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -192,17 +192,26 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="jAU-eT-eQA">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="ZHQ-VE-c4S"/>
-                        <barButtonItem key="rightBarButtonItem" title="Save" style="done" id="IfU-VC-tTK"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="ZHQ-VE-c4S">
+                            <connections>
+                                <segue destination="LZ5-cj-Nxh" kind="unwind" unwindAction="unwindSegueWithSegue:" id="cYs-ma-BPh"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" style="done" id="IfU-VC-tTK">
+                            <connections>
+                                <segue destination="LZ5-cj-Nxh" kind="unwind" identifier="saveSegue" unwindAction="unwindSegueWithSegue:" id="rLg-HX-JD3"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="descriptionTextField" destination="XNa-Ay-Ob8" id="U1j-UO-yWy"/>
                         <outlet property="emojiTextField" destination="kke-yG-Dhy" id="api-Cu-5PH"/>
                         <outlet property="nameTextField" destination="nkO-B2-uIh" id="8Tt-mW-tFc"/>
-                        <outlet property="saveButton" destination="IfU-VC-tTK" id="7AY-xi-Gia"/>
+                        <outlet property="saveButton" destination="IfU-VC-tTK" id="HsH-3g-Ue8"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Yc-Kj-ent" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="LZ5-cj-Nxh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2301.5267175572517" y="541.54929577464793"/>
         </scene>
